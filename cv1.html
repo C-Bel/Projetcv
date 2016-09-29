@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="cv1.css"/>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+
+
+
+
 </head>
 
 <body>
@@ -45,7 +49,8 @@
 
 </div>
 
-<div id="toggle"><code>	<ul>
+<div id="toggle"><code>	
+	<ul>
         <li>Baccalauréat profesionnel Commerce 2014</li>
 		<li>BEP MSA 2013</li>
 		<li>Brevet des collèges 2011</li>
@@ -103,11 +108,20 @@
 
 <h2>Centres d'intérets</h2>
 
+<div class="centredinteret">
+
+<a href="#" class="toggler2">Cliquez ici !</a>
+
+</div>
+
+<div class="toggle2"><code>	
 
 <ul>
 	<li>La randonnée</li>
 	<li>l'informatique</li>
 </ul>
+
+</code></div>
 
 </footer>
 
@@ -124,15 +138,12 @@ monImage.onclick = function() {
 }
 </script>
 
-
-
-
-
 <script>
 
 jQuery(document).ready(function()
 {
    
+   jQuery('#toggle').hide();
    jQuery('#toggle').hide();
    
    jQuery('a#toggler').click(function()
@@ -145,6 +156,22 @@ jQuery(document).ready(function()
 </script>
 
 
+<script>
+
+jQuery(document).ready(function()
+{
+   
+   jQuery('.toggle2').hide();
+   jQuery('.toggle2').hide();
+   
+   jQuery('a.toggler2').click(function()
+  {
+      jQuery('.toggle2').toggle(400);
+      return false;
+   });
+});
+
+</script>
 
 </body>
 

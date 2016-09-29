@@ -6,9 +6,8 @@ body{
 }
 
 
-
 *{
-	background-color: #A7DFEB;
+	
 	background-image: url("./ecran3.jpg");
 }
 
@@ -91,3 +90,10 @@ footer{
 #toggle{height:auto; background:#eee; border:5px solid #900; margin:1em;position: absolute; top:300px;left:1265px;}
 #toggle p{text-align:center;padding:0}
 
+.centredinteret{
+	position: absolute;
+	top: 150px;
+	left: -300px;
+	font-size: 28px;
+	border-style: solid;
+}
