@@ -4,9 +4,11 @@
 	<title>Curriculum Vitae Developper Web</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="cv1.css"/>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
 </head>
 
 <body>
+
 
 <header>
 
@@ -16,7 +18,7 @@
 
 <div class="image">
 
-	<img src="http://www.literaturereviewhq.com/wp-content/uploads/2012/08/matrix_literature_review.jpeg" alt="image matrix"/>
+	<img src="./matrix1.jpg" alt="image matrix"/>
 
 </div>
 
@@ -34,27 +36,28 @@
 
 <div class="email">
 
-	<a href="c.hris@laposte.net"> Email de christophe bello</a>
+	<a href="#">c.hris@laposte.net</a>
 </div>
 
-<div class="paragraphe2">
+<div class="formation">
 
-<h2>Formation</h2>
+<a href="#" id="toggler">FORMATION</a>
 
+</div>
 
-	<ul>
+<div id="toggle"><code>	<ul>
         <li>Baccalauréat profesionnel Commerce 2014</li>
 		<li>BEP MSA 2013</li>
 		<li>Brevet des collèges 2011</li>
 
 		<li>Permis de conduir, permis B</li>
 		
-	</ul>
-</div>
+	</ul></code></div>
 
-<div class="paragraphe3">
+<section>
 
 <h2>Expériences professionnelles</h2>
+
 
 <h3>Merchandiseur, missions d'intérims chez Manpower</h3>
 
@@ -94,9 +97,9 @@
 		<li>Pointages des heures des employés, gestion de la boite mail ainsi que du téléphone, réalisation de demande de fournitures et de fiches d'interventions, enregistrement de factures transférées au service des finances et gestion des archives</li>
 	</ul>
 	
-</div>
+</section>
 
-<div class="paragraphe13">
+<footer>
 
 <h2>Centres d'intérets</h2>
 
@@ -106,7 +109,42 @@
 	<li>l'informatique</li>
 </ul>
 
-</div>
+</footer>
+
+<script>
+var monImage = document.querySelector('img');
+
+monImage.onclick = function() {
+    var maSrc = monImage.getAttribute('src');
+    if(maSrc === './matrix1.jpg') {
+      monImage.setAttribute ('src','./matrix2.jpg');
+    } else {
+      monImage.setAttribute ('src','./matrix1.jpg');
+    }
+}
+</script>
+
+
+
+
+
+<script>
+
+jQuery(document).ready(function()
+{
+   
+   jQuery('#toggle').hide();
+   
+   jQuery('a#toggler').click(function()
+  {
+      jQuery('#toggle').toggle(400);
+      return false;
+   });
+});
+
+</script>
+
+
 
 </body>
 
